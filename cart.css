@@ -1,0 +1,29 @@
+.rt_bag_cont1{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    /* width: 80%; */
+}
+.rt_mybag>h2{
+    margin-left: 0px;
+}
+.rt_mybag{
+    width: 70%;
+    height: 200px;
+    /* border: 2px solid red; */
+}
+.rt_bag_cont1>img,div{
+    margin: 10px 30px 10px 30px;
+}
+.rt_bag_cont1>button{
+    
+    border: 2px solid rgb(10, 26, 201);
+    color: rgb(42, 10, 155);
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 16px;
+    margin: 40px 0 30px 40px;
+    border-radius: 8px;
+}
