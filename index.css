@@ -363,12 +363,16 @@ background-color:white;
    #yellow>img{
     width: 100%;
     margin: auto;
+    margin-bottom:-5px;
    }
    #yellow>div{
     width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(6,1fr);
+   }
+   #yellow>div>img{
+    width: 100%;
    }
    
    /* #yellow_grid{
@@ -521,7 +525,7 @@ margin-bottom: 20px;
   /* border: 1px solid rgb(110, 104, 104); */
   justify-content: space-evenly;
   text-align: center;
-  margin-bottom:90px;
+  margin-bottom:30px;
   padding-top:10px;
 }
 #social_media a{
@@ -558,23 +562,21 @@ margin-bottom: 20px;
 }
 
 #bottom_section {
-  width:85%;
+  width:92%;
   display: flex;
-  height: 100px;
-  border:1px solid red;
+  /* border:1px solid red; */
   margin: auto;
-  /* flex-wrap: wrap; */
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  font-size: 17px;
-  /* margin-bottom:30px; */
+ margin-bottom:60px;
 }
 #bottom_section>div{
-  height:35px;
-  width:228px;
-   border: 1px solid rgb(6, 6, 6);
+  height:50px;
+  width:250px;
+   border-right: 1px solid rgb(6, 6, 6);
   padding:10px;
+  font-size: 17px;
 }
  #bottom_section a{
   text-decoration: none;
@@ -582,12 +584,12 @@ margin-bottom: 20px;
  }
 #copyright{
   width:92%;
-  height:150px;
+  height:50px;
   margin: auto;
   text-align: center;
   border: 1px solid red;
   color: rgb(151, 134, 134);
-   margin-bottom:190px;
+   margin-bottom:90px;
 }
 
 
@@ -727,13 +729,19 @@ margin-bottom: 20px;
    margin: auto;
     margin-bottom: 25px;
   }
-
+  #yellow>img{
+    width: 100%;
+    height:100%;
+    margin: auto;
+   }
    #yellow>div{
     width:100%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
   }
-
+  /* #yellow>div>img{
+    width:100%;
+  } */
   #again img{
      height:80%;
   }
@@ -765,6 +773,8 @@ height:100%;
  }
 
   #grid1{
+    width:92%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap:0px;
@@ -773,19 +783,21 @@ height:100%;
  
   /* footer */
      #bottom_section{
+        width:92%;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
-        
+         margin-bottom:10px;
      }
      #bottom_section>div{
-      height:35px;
-      width:228px;
-       border-right: 1px solid rgb(6, 6, 6);
-      padding:10px;
+      width: 100%;
+       border:none;
+      padding:6px;
+      font-size: 19px;
     }
 
-
+   
+    
 
 
 
