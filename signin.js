@@ -25,7 +25,14 @@ function signInForms(){
   });
 
   if(flag===true){
+   if(email_signin.value==="riteshsalve07@gmail.com" && password_signin.value==="9977"){
+    alert("Welcome Boss")
+    location.href="./admin.html"
+   }else{
     alert("Sign In Succussful")
+    location.href="./index.html"
+   }
+    
   }
   else if(count==1){
     alert("Wrong Password")
