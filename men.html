@@ -26,7 +26,7 @@
             <a id="left" href=""><i class="fa-solid fa-wand-magic-sparkles"></i> Belk Rewards+</a>
             <a href=""><i class="fa-regular fa-ticket"></i>Coupns</a>
 
-            <a id="right" href=""><i class="fa-solid fa-user"></i>My Account
+            <a id="right" href="./signin.html"><i class="fa-solid fa-user"></i>My Account
                 <!-- <div class="dropdown-content">
                        <ul>
                         <li id="btn1">Sign In</li>
@@ -39,7 +39,7 @@
                     </div> -->
             </a>
 
-            <a href=""><i class="fa-solid fa-cart-shopping"></i> <span id="item-count">0</span>Bag</a>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i> <span id="item-count">0</span>Bag</a>
         </div>
         <!-- </div> -->
 
@@ -821,18 +821,29 @@
 
 
     </div>
-    <!-- <img style="width: 100%;"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS38fZdk_EYiQKQ8cTGuOCsL7U64S3EI5JW2A&usqp=CAU"
-        alt=""> -->
-        <div id="page-desc">
-            <h3>Belk / <span style="font-weight: 300;">men</span></h3>
-        </div>
-       
+
+    <div id="page-desc">
+        <h3>Belk / <span style="font-weight: 300;">men</span></h3>
+    </div>
+
     <div id="product-top">
         <div id="filter">
-            <a href="" style="text-decoration: none;color: black;font-weight: 700;font-size: 20px;">Filters</a>
+            <a href="" style="text-decoration: none;color: black;font-weight: 700;font-size: 20px;">Filters </a>
             <hr>
-          <!-- <div class="hero">
+            <a id="filter-item" href=""
+                style="text-decoration: none;color: black;font-weight: 550;font-size: 17px;">Pickup
+                <ul id="ul">
+                    <li><input type="checkbox"><a href="">FREE Pickup Store Tommorow</a></li>
+                    <a href="">Find a Store</a>
+                    <p>Get it fast with contactless curbside pickup</p>
+                </ul>
+            </a>
+            <hr>
+            <a href="" style="text-decoration: none;color: black;font-weight: 550;font-size: 17px;">Mens</a>
+            <hr>
+            <a href="" style="text-decoration: none;color: black;font-weight: 550;font-size: 17px;">Featured Shops</a>
+            <hr>
+            <!-- <div class="hero">
                 <div class="selector">
                     <div id="selectField">
                         <p>Men</p>
@@ -843,13 +854,57 @@
         </div>
         <div id="img">
             <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_fh_1?$DWP_PHOTO$" alt="">
-            <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_3c_1?$DWP_PHOTO$" alt="">
-        </div>
 
+        </div>
 
     </div>
 
+    <div id="third-line-img">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_3c_1?$DWP_PHOTO$" alt="">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_3c_2?$DWP_PHOTO$" alt="">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_3c_3?$DWP_PHOTO$" alt="">
+    </div>
+
+    <div id="fourth-line-img">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_fh_2_cta?$DWP_PHOTO$" alt="">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_fh_3_cta?$DWP_PHOTO$" alt="">
+    </div>
+
+    <div id="fifth-line-img">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_2c_1?$DWP_PHOTO$" alt="">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_2c_2?$DWP_PHOTO$" alt="">
+    </div>
+
+    <div id="sixth-line-img">
+        <img src="https://belk.scene7.com/is/image/Belk/wk06_2023_chan_men_0306_fh_4?$DWP_PHOTO$" alt="">
+    </div>
+
+    <div id="seventh-line-img">
+        <img src="https://belk.scene7.com/is/image/Belk/wk02_2023_spec_levi_nse_all_mens_ch_fh?$DWP_PHOTO$" alt="">
+    </div>
+
+    <div id="totalfilter">
+        <p style=" font-size:18px; font-weight:400px;line-height:35px;">Men's Styles & Apparel (<span
+                id="total">0</span>)</p>
+        <select name="" id="filter">
+            <option value="">Sort</option>
+            <option value="">Price:Low to High</option>
+            <option value="">Price:High to Low</option>
+            <option value="">Best Match</option>
+            <option value="">New Arrivals</option>
+            <option value="">Doorbusters</option>
+            <option value="">Top Rated</option>
+        </select>
+    </div>
+
+    <div id="product-container">
+        <!-- Data will append by server -->
+    </div>
+
+    <div id="pagination-wrapper">
+
+    </div>
 </body>
-<script src="./mens.js"></script>
+<script src="./men.js"></script>
 
 </html>
