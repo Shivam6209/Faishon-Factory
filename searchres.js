@@ -1,94 +1,24 @@
-window.onscroll = function () {
-  myFunction()
-};
+function indexrun(){
+    location="./index.html"
+ }
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+ let searchValue=JSON.parse(localStorage.getItem("searchInp"));
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-// fetchAndRender();
-
-// async function fetchAndRender(){
-//   let userObj={
-//     name:"shivam",
-//     email:"shi@",
-//     password:"1234"
-//   }
-//   try {
-
-//     let res= await fetch("https://lime-colorful-ladybug.cyclic.app/reg",{
-//       method:"POST",
-//       headers:{
-//         "Content-Type":"application/json"
-//       },
-//       body: JSON.stringify(userObj)
-//     })
-//     let data=await res.json();
-//     console.log(data)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-// fetchAndRenderLogin()
-
-async function fetchAndRenderLogin() {
-  let userObj = {
-    email: "shi@",
-    password: "1234"
-  }
+ let productData = document.getElementById("product-container");
+fetchAndRenderProductData(1,searchValue)
+async function fetchAndRenderProductData(num,value) {
   try {
-
-    let res = await fetch("https://lime-colorful-ladybug.cyclic.app/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(userObj)
-    })
-    let data = await res.json();
-    console.log(data.token)
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-let DisplayUl = document.getElementById("ul")
-let fliterItem = document.getElementById("filter-item");
-fliterItem.addEventListener("click", (e) => {
-  e.preventDefault()
-  DisplayUl.style.display = "block"
-})
-
-
-let productData = document.getElementById("product-container");
-fetchAndRenderProductData(1)
-async function fetchAndRenderProductData(num) {
-  try {
-    let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getmen?page=${num}`)
+    let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getmen?page=${num}&title=${value}`)
     let data = await res.json();
     console.log(data)
     let total = document.getElementById("total");
     total.innerText = data.length;
     getCard(data)
-    filterData(data)
   } catch (error) {
     console.log(error)
   }
 }
-let filter=document.getElementById("filter");
-  filter.addEventListener("change",()=>{
-    console.log("working")
-  })
-function filterData(sort){
-  console.log("coming")
-  
-}
+
 
 function getCard(data) {
   productData.innerHTML = null;
@@ -126,7 +56,7 @@ function createDivAndAppend(id, image, title, price, desc) {
   img.addEventListener("mouseleave",()=>{
     img.src=image[0]
   })
- 
+
 
 
   const cardTitle = document.createElement("h3");
@@ -184,13 +114,8 @@ function getAsButton(text, dataId) {
   button.classList.add("pagination-button");
   button.setAttribute("data-page-number", dataId);
   button.addEventListener("click", (e) => {
-    fetchAndRenderProductData(button.innerText)
+    fetchAndRenderProductData(button.innerText,searchValue)
   })
 
   return button
 }
-
-function indexrun() {
-  location = "./index.html"
-}
-

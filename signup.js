@@ -60,8 +60,6 @@ function submitform(){
 
 }
 
-
-
-
-
-
+function indexrun(){
+   location="./index.html"
+ }
