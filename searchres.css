@@ -298,16 +298,19 @@ body {
 }
 
 #product-container>div>div>h3 {
+    margin: 3px;
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
-
+#product-coupn{
+    color: #000000;
+}
 #product-container>div>div>.product-price {
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #cc0000;
+    color: #ff0000;
 }
 
 #product-container>div>div>.product-price-fake {
@@ -364,4 +367,8 @@ body {
     background-color: rgb(145, 133, 133);
     font-weight: 700;
     font-family:Roboto, Arial, sans-serif;;
+}
+
+.card:hover{
+    cursor: pointer;
 }
