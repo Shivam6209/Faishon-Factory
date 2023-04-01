@@ -41,3 +41,7 @@ function signInForms(){
   }
   
 }
+
+function indexrun(){
+  location="./index.html"
+}
