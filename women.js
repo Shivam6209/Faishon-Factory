@@ -37,26 +37,26 @@ window.onscroll = function () {
   // }
   // fetchAndRenderLogin()
   
-  async function fetchAndRenderLogin() {
-    let userObj = {
-      email: "shi@",
-      password: "1234"
-    }
-    try {
+  // async function fetchAndRenderLogin() {
+  //   let userObj = {
+  //     email: "shi@",
+  //     password: "1234"
+  //   }
+  //   try {
   
-      let res = await fetch("https://lime-colorful-ladybug.cyclic.app/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userObj)
-      })
-      let data = await res.json();
-      console.log(data.token)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  //     let res = await fetch("https://lime-colorful-ladybug.cyclic.app/login", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(userObj)
+  //     })
+  //     let data = await res.json();
+  //     console.log(data.token)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
   
   let DisplayUl = document.getElementById("ul")
   let fliterItem = document.getElementById("filter-item");
@@ -70,7 +70,7 @@ window.onscroll = function () {
   fetchAndRenderProductData(1)
   async function fetchAndRenderProductData(num) {
     try {
-      let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getmen?page=${num}`)
+      let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getwomen?page=${num}`)
       let data = await res.json();
       console.log(data)
       let total = document.getElementById("total");
@@ -111,7 +111,6 @@ window.onscroll = function () {
     const img = document.createElement("img");
     img.setAttribute("img-id", "product-img");
     img.src = image[0];
-    img.style.transition = "3s";
     img.addEventListener("mouseover",()=>{
       if(image[1]!=""){
       img.src=image[1]
