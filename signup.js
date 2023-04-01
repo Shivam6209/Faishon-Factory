@@ -43,18 +43,19 @@ function submitform(){
    localStorage.setItem("SignUp",JSON.stringify(signupForm))
    if(firstname.value==="" || lastname.value==="" ){
       
-      alert("plese gave input");
-      firstname.innerHTML=""
-      lastname.innerHTML=""
-      phoneNumber.innerHTML=""
-      email_signup.innerHTML=""
-      password_signup.innerHTML=""
+      alert("Please Enter a Value");
+      // firstname.innerHTML=""
+      // lastname.innerHTML=""
+      // phoneNumber.innerHTML=""
+      // email_signup.innerHTML=""
+      // password_signup.innerHTML=""
       window.location.reload()
       
 
-   }else{
+   }
+   else{
       alert("Sign-Up Successfully")
-
+      location.href="./signin.html"
      
    }
 

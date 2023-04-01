@@ -10,6 +10,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.ico">
     <script src="https://kit.fontawesome.com/a92e0368d9.js" crossorigin="anonymous"></script>
 </head>
+<body onload="show()">
+<div class="main">
+<div class="main_first">
+   <div class="rt_mybag">
+    <h3>My Bag</h3>
+    <div class="rt_bag_cont1">
+        <img src="https://belk.scene7.com/is/image/Belk/BelkRewardsPlus_Insider?qlt=90&wid=66" alt="">
+        <div class="rt_bag_cont2"> 
+        <h2>Save an extra $16.25</h2>
+        <p>on this order when you open a Belk Rewards+credit   <a href="/belk-credit-card-rewards-benefits.html?sitecode=BEACSL1DB">Learn More. </a></p>
 
 <body>
     <!-- Navbar -->
@@ -33,7 +43,40 @@
                 </div>
             </div>
 
-
+   <!-- cart_product -->
+   <div class="cart_product">
+    <div class="cart_pro1">
+     <div class="cart_img">
+        <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203867_CM13SW200T_A_435&$DWP_THUMB_PDP_DESKTOP$" alt="">
+     </div>
+     <div class="cart_desc">
+        <h4>Chaps Big & Tall Sustainably Crafted Short <br> Sleeve Woven Button Down Shirt</h4>
+        <p>UPC: 0195900405298</p>
+        <p style="text-decoration: wavy;">$65.00</p>
+        <p>$32.50 Doorbuster</p>
+        <p>Edit</p>
+     </div>
+     <div class="qty">
+        <select name="" id="qty_option">
+            <h5>Qty:</h5>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <div class="edit_pt">
+             <a href="">Remove</a>
+             <a href="">Edit</a>
+        </div>
+     </div>
+    </div>
+   </div>
 
 
             <!-- coupon -->
@@ -69,6 +112,17 @@
     </div>
     <h2 style="width: 95%; margin: auto;">Customers Also Bought </h2>
     <hr style="height: 1px; width: 95%;" class="">
+    <div class="order_summ">
+        <hr style="height: 5px; background-color: aqua;">
+        <p>Congrats! You've earned FREE Shipping</p>
+        <button>Secure Buy Now</button>
+    </div>
+</div>
+</div>
+
+<!-- cutomer also bought -->
+<h2 style="width: 95%; margin: auto;">Customers Also Bought </h2>
+<hr style="height: 1px; width: 95%;" class="">
 
     <div style="display: flex;" class="product">
         <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
@@ -147,6 +201,97 @@
 
 
     </div>
+<div style="display: flex;" class="parent" >
+    <div class="leftArrow" onclick="moveLeft()">
+        <button>&lt;</button>
+    </div>
+    <div  class="child" id="c1" >
+        <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>Saddlebred@ Men's Big & Tall Easy Care Short </p>
+        <p>$49.50</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c2">
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203824_RBKTL11130BGTL_A_201&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>ZELOS Zelos Men's Big & Tall Air Rush Pants</p>
+        <p>$11.85</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c3" >
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203305_CH327SSBK_A_010_T10L00&layer=comp&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>Chaps Men's Big & Tall Everyday Polo</p>
+        <p>$19.80</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c4">
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203795_35424SP0000101_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>PGA TOUR Men's & Tall Jacquard Print short</p>
+        <p>$12.00</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c5">
+        <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>IZOD Men's Big & Tall Advantage Fleece </p>
+        <p>$27.20</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c6">
+        <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203795_35424SP0000101_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>Chap's Men's Big 5 FLEX Pocket Stretch Twill Pants</p>
+        <p>$24.00</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c7" >
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203793_35424SP0000222_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>Long Sleeve Fishing Shirt</p>
+        <p>$32.50</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div  class="child" id="c8" >
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203867_CM42LW289T_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>Sold Fishing Sleeve Shirt</p>
+        <p>$21.80</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c6">
+        <img src="" alt="">
+        <p>Chap's Men's Big 5 FLEX Pocket Stretch Twill Pants</p>
+        <p>$24.00</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c2">
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203824_RBKTL11130BGTL_A_201&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>ZELOS Zelos Men's Big & Tall Air Rush Pants</p>
+        <p>$11.85</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c3" >
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203305_CH327SSBK_A_010_T10L00&layer=comp&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>Chaps Men's Big & Tall Everyday Polo</p>
+        <p>$19.80</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c4">
+        <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203795_35424SP0000101_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>PGA TOUR Men's & Tall Jacquard Print short</p>
+        <p>$12.00</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+    <div class="child" id="c5">
+        <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$" alt="">
+        <p>IZOD Men's Big & Tall Advantage Fleece Sweatshirt</p>
+        <p>$27.20</p>
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+    </div>
+
+    <!-- <a class="prev" onclick="moveLeft()">❮</a>
+    <a class="next" onclick="moveRight()">❯</a> -->
+    
+    <div class="leftArrow" onclick="moveRight()">
+        <button>&gt;</button>
+    </div>
+     
+</div>
 
     <!-- Footer -->
   <footer id="footer"></footer>
