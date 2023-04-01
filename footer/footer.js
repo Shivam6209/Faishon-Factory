@@ -114,7 +114,9 @@ let footer = () => {
             alt="">
     </div>
 </div>
-
+<div id="feedback">
+<img src="https://nebula-cdn.kampyle.com/wu/330590/resources/image/1533563274716_belk_feedback_button.png" alt="">
+</div>
 
 
     <div id="empty"></div>

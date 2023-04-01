@@ -31,7 +31,7 @@ margin-top: 5px;
   display: block;
   width: 35px;
   margin-left:1484px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: fixed;
   top:380px;
   cursor: pointer;
@@ -57,14 +57,13 @@ background-color:white;
   width:100%;
   height:55px;
   position: fixed;
-  top:660px;
+  top:605px;
   justify-content: center;
-
-  border: 1px solid rgb(128, 128, 128);
-  background-color:rgb(237, 236, 235);
+  border-top: 1px solid grey;
+  background-color: white;
   padding-top:10px;
   gap: 20px;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
   #bottom_div img{
      width:20px;
@@ -299,7 +298,7 @@ margin-bottom: 20px;
  /* Medium  screen media Query */
  @media screen and (min-width:650px) and (max-width:930px) {
   #img2{
-    height:150px;
+    height:100px;
   }
  /* #feedback{
   display: none;
@@ -470,7 +469,7 @@ grid-template-columns: repeat(2,1fr);
       width:100%;
       height: 55px;
       margin: auto;
-     border: 1px solid green;
+     /* border: 1px solid green; */
     }
     #social_media>div>div{
       width:100%;
@@ -513,10 +512,10 @@ grid-template-columns: repeat(2,1fr);
 
 /*--------------------- Mobile screen media query ----------------------------------*/
 @media screen and (max-width:650px) {
-
-  #navbar{
+   #navbar{
     display: none;
-  }
+   }
+  
   #navbar1{
     display: block;
     width:100%;
@@ -529,8 +528,8 @@ grid-template-columns: repeat(2,1fr);
     width: 100%;
     display: flex;
     margin: auto;
-    height: 55px;
-    background-color: rgb(241, 238, 238);
+    height: 60px;
+    background-color: rgb(252, 251, 251);
     display: flex;
      justify-content:space-between;
      padding-bottom: 15px;
@@ -539,26 +538,103 @@ grid-template-columns: repeat(2,1fr);
     width:100%;
     margin: auto;
     display: flex;
+    margin-right: 10px;
+  
    }
    #div1{
     display: flex;
-    justify-content: flex-end;
-   }
-   #top img{
-    height: 55px;
-   }
-   
-   #search1{
-    display: block;
     width: 100%;
-    height: 60px;
+    height: 100%;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+   }
+  #div1 img{
+    width: 30px;
+    height:30px;
+    
+  }
+  
+   #search1{
+    background-color:white ;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+     /* border: 1px solid yellow; */
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
    }
+   #search1>div{
+    display: flex;
+    width:85%;
+    margin: auto;
+    height: 60%;
+    padding-top: 10px;
+     /* border: 1px solid pink; */
+    
+   }
+   #search1 img{
+   height: 45px;
+    width: 45px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid rgb(114, 113, 113);
+   
+   }
 
-
-  #img2{
-    height:150px;
+  #search1 input{
+    height: 45px;
+    font-size: 18px;
+    width: 100%;
+    padding-left: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   border-right: none;
+   color: #717171;
   }
+  #scroll{
+  
+    width: 100%;
+    aspect-ratio: 9/1;
+    margin: auto;
+    border: solid black 2px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    height: 70px;
+     background-color: white;
+     border: 1px rgb(8, 8, 8) solid;
+  }
+
+
+ #scroll>div{
+  margin: 2px;
+  display: inline-block;
+  scroll-snap-align: start;
+  scroll-margin-left: 250px;
+  height: 30px;
+  padding:4px;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 3px;
+  width:18%;
+  border: 1px solid rgb(61, 60, 60);
+ }
+ #scroll>div>p{
+  font-size: 14px;
+  width:100%;
+ }
+ #scroll>div:hover{
+  background-color: whitesmoke;
+  border: 2px solid grey;
+  cursor: pointer;
+ }
+
+
+
+#banner1{
+  padding-top: 50px;
+}
+ 
  #feedback{
   display: none;
  }
@@ -571,16 +647,14 @@ grid-template-columns: repeat(2,1fr);
 }
  #flex1 img{
   width:100%;
-  height:300px;
+  height:100%;
   margin: auto;
 }
   #spend_more{
     width:92%;
-    height: 250px;
   }
   #spend_more img{
     width:100%;
-    height: 100%;
   }
   /* #weekday_deal{
     margin: auto;
@@ -589,14 +663,14 @@ grid-template-columns: repeat(2,1fr);
   #weekday_deal img{
     width:100%;
     margin: auto;
-    height: 300px;
+    
   }
   #flex2{
     height:250px;
   }
   #flex2 img{
     width: 100%;
-    height:100%;
+    
   }
   #yellow{
    width:92%;
