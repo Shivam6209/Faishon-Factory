@@ -114,6 +114,14 @@ function createDivAndAppend(id, image, title, price, desc) {
   card.classList.add("card");
   card.setAttribute("data-id", id);
 
+  ////// product view page//////
+let productId=JSON.parse(localStorage.getItem("product-id-view"))
+card.addEventListener("click",()=>{
+  localStorage.setItem("product-id-view",JSON.stringify(id))
+  location="productViewPage.html"
+})
+////// product view page//////
+
   const img = document.createElement("img");
   img.setAttribute("img-id", "product-img");
   img.src = image[0];
@@ -193,4 +201,3 @@ function getAsButton(text, dataId) {
 function indexrun() {
   location = "./index.html"
 }
-

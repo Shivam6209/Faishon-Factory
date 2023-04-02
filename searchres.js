@@ -8,7 +8,7 @@ function indexrun(){
 fetchAndRenderProductData(1,searchValue)
 async function fetchAndRenderProductData(num,value) {
   try {
-    let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getmen?page=${num}&title=${value}`)
+    let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getkids?page=${num}&title=${value}`)
     let data = await res.json();
     console.log(data)
     let total = document.getElementById("total");
@@ -38,19 +38,27 @@ function getCard(data) {
   return cardList;
 }
 
-
 function createDivAndAppend(id, image, title, price, desc) {
   const card = document.createElement("div");
   card.classList.add("card");
   card.setAttribute("data-id", id);
+////// product view page//////
+let productId=JSON.parse(localStorage.getItem("product-id-view"))
+card.addEventListener("click",()=>{
+  localStorage.setItem("product-id-view",JSON.stringify(id))
+  location="productViewPage.html"
+})
+////// product view page//////
 
   const img = document.createElement("img");
   img.setAttribute("img-id", "product-img");
+  // img.src(onerror="this.src='';")
   img.src = image[0];
-  img.style.transition = "3s";
   img.addEventListener("mouseover",()=>{
     if(image[1]!=""){
     img.src=image[1]
+    }else{
+      img.src=image[0]
     }
   })
   img.addEventListener("mouseleave",()=>{
@@ -66,8 +74,7 @@ function createDivAndAppend(id, image, title, price, desc) {
   const ProductPrice = document.createElement("p");
   ProductPrice.classList.add("product-price");
   let span = document.createElement("span")
-  span.classList.add("product-coupn");
-  span.style.color = "black"
+  span.setAttribute("id","product-coupn");
   span.innerText = "after coupn"
   if (price == "after coupon") {
     price = `$ 175 ${span.innerText}`

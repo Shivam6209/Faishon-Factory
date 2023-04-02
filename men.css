@@ -62,7 +62,7 @@ body {
 }
 
 #fourth-line-img>img {
-    margin-bottom: -3.5px;
+    margin-top: -3.5px;
 }
 
 #fifth-line-img {
@@ -166,12 +166,17 @@ body {
 #pagination-wrapper>.pagination-button {
     font-size: 20px;
     border: none;
+    min-width: 35px;
+    max-width: 35px;
+    background-color: rgb(150, 57, 57);
+    color: #e9e6e6;
     padding: 8px;
     border-radius: 5px;
     margin: 3px;
-    color: #222222;
-    background-color: rgb(145, 133, 133);
     font-weight: 700;
     font-family: Roboto, Arial, sans-serif;
     ;
+}
+.card:hover{
+    cursor: pointer;
 }

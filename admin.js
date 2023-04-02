@@ -1,107 +1,66 @@
-let brand=document.getElementById("brand");
-let image=document.getElementById("image");
-let title=document.getElementById("title");
-let price=document.getElementById("price");
-let addatabutton=document.getElementById("addProducts");
-let tbody=document.querySelector("tbody");
+let addatabutton = document.getElementById("addProducts");
+let tbody = document.getElementById("tbody");
 
-async function fetchdata(){
-
-    let res=await fetch("https://lime-colorful-ladybug.cyclic.app")
-    let data=await res.json()
-    console.log(data)
-    data.forEach(e => {
-        
-       tbody.append( append(e.brand,e.price,e.image,e.title,e.id))
-    });
-}
-fetchdata()
-
-addatabutton.addEventListener("click",()=>{
-    
-    let data={
-        brand:brand.value,
-        image:image.value,
-        title:title.value,
-        price:price.value,
-
+addatabutton.addEventListener("click", () => {
+    if (image.value != "" && title.value != "" && price.value != "") {
+        let xcategory = document.getElementById("Category").value;
+        let token = JSON.parse(localStorage.getItem("acces-token"))
+        fetchAndAddProduct(xcategory, token)
     }
-    addata(data)
 })
 
-async function addata(x){
-
-    let res=await fetch("https://lime-colorful-ladybug.cyclic.app/getdata",{
-        method:"POST",
-            headers:{
-                "Content-Type":"application/json"
+async function fetchAndAddProduct(xcategory, token) {
+    try {
+        let image = document.getElementById("image").value;
+        let title = document.getElementById("title").value;
+        let price = document.getElementById("price").value;
+        let brand=document.getElementById("brand").value
+        let newProduct = [{
+            img: image,
+            title: title,
+            price: price,
+            category: "$15 Bobbi Brown Set With Purchase",
+        }];
+       
+        let res = await fetch(`https://lime-colorful-ladybug.cyclic.app${xcategory}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "authorization": `${token}`
             },
-            body:JSON.stringify(x)
-    })
-    let data=await res.json()
-    console.log(data)
+            body: JSON.stringify(newProduct)
+        })
+        let data = await res.json();
+        alert("product added sucessfully")
+        console.log(data)
+        append(brand,newProduct[0].price,newProduct[0].img, newProduct[0].title,"1234")
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-
-function append(brand,price,img,title,id){
-
-    let tr=document.createElement("tr");
-    tr.setAttribute("data-id",id)
-    let brand1=document.createElement("td");
-    let price1=document.createElement("td");
-    let title1=document.createElement("td");
-    let image1=document.createElement("img");
-    image1.className="image";
-    brand1.innerText=brand;
-    price1.innerText=price;
-    title1.innerText=title;
-    image1.src=img;
-    // let edit=document.createElement("button")
-    let remove=document.createElement("button")
-    remove.innerText="❌";
-    // edit.innerText="✏";
-    
-   
-//     edit.addEventListener("click",()=>{
+function  append(brand,price,img, title,id){
+    // tbody.innerHTML = null;
+        let tr = document.createElement("tr");
+        let image=document.createElement("img");
+        image.setAttribute("id","tbody-img")
+        image.src=img
+        let priceTD=document.createElement("td");
+        let brandTD=document.createElement("td");
+        let titleTD=document.createElement("td");
+        let idTD=document.createElement("td");
+        priceTD.innerText=price;
+        brandTD.innerText=brand;
+        titleTD.innerText=title;
+        idTD.innerText=id;
+        let deleteBtn=document.createElement("td")
+        deleteBtn.innerText = "Delete";
+        deleteBtn.setAttribute("id", "delete")
+        deleteBtn.addEventListener("click",()=>{
+            alert("are you sure!")
+            tbody.innerHTML = null;
+        })
         
-//       name1.contentEditable=true;
-      
-      
-//       let data={
-//         name:name.innerText,
-//         image:image.innerText,
-//         title:title.innerText,
-//         price:price.innerText,
-
-//     }
-//    console.log(data)
-//     //    edit1(id,data);
-        
-//     }) 
-   
-    remove.addEventListener("click",()=>{
-        deleteitem(id)
-    })
-    tr.append(image1,brand1,price1,title1,remove)
-     return tr
-    
-}
-
- function deleteitem(id){
-    fetch(`https://lime-colorful-ladybug.cyclic.app/${id}`,{
-        method:"DELETE",
-        headers:{ "Content-Type":"application/json"}
-    })
-}
-
-
-async function edit1(id,data1){
-   let res=await fetch(`https://lime-colorful-ladybug.cyclic.app/getdata${id}`,{
-        method:"PATCH",
-        headers:{ "Content-Type":"application/json"},
-        body:JSON.stringify(data1)
-
-    })
-    let data=await res.json()
-    console.log(data)
+        tr.append(image,brandTD,priceTD,titleTD,deleteBtn)
+        tbody.append(tr);
 }
