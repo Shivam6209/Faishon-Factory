@@ -1,51 +1,47 @@
-let sign_in_now = document.getElementById("sign-in-now");
+let sign_in_now = document.querySelector("#sign-in-now");
+let email_signin = document.querySelector("#e-mail-signin-page");
+let password_signin = document.querySelector("#password-signin-page");
 
-sign_in_now.addEventListener("click", () => {
-  let email_signin = document.getElementById("e-mail-signin-page");
-  let password_signin = document.getElementById("password-signin-page");
-  if (email_signin.value != "" && password_signin.value != "") {
-      signinUser()
-      console.log("clicked")
-  }
-})
+sign_in_now.addEventListener("click", signInForms)
 
-
-
-async function signinUser() {
-
-  try {
-    let email_signin = document.getElementById("e-mail-signin-page");
-    let password_signin = document.getElementById("password-signin-page");
-
-    let userObj = {
-      email: email_signin.value,
-      password: password_signin.value
-    }
-    let res = await fetch("https://lime-colorful-ladybug.cyclic.app/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(userObj)
-    })
-    let data = await res.json();
-    console.log(data);
-    localStorage.setItem("user-display-name", JSON.stringify(data.name));
-    alert(data.msg);
-    if((email_signin.value == "ritesh@gmail.com" && password_signin.value =="9977")||(email_signin.value == "shivam@gmail.com" && password_signin.value =="6209")||(email_signin.value == "ranvijay@gmail.com" && password_signin.value =="1234")||(email_signin.value == "deepshree@gmail.com" && password_signin.value =="1234")){
-      localStorage.setItem("acces-token", JSON.stringify(data.token));
-      location="./admin.html"
+function signInForms(){
+  
+  let signupForm = JSON.parse(localStorage.getItem("SignUp"))||[]
+  let flag = false;
+  count=0;
+  nothing=0;
+  signupForm.forEach((element,index) => {
+   
+    if(element.email_signup_data === email_signin.value){
+      if(element.password_signup_data === password_signin.value){
+        flag=true;
+      }else{
+        count++;
+      }
     }else{
-       location="./index.html"
+      nothing++;
+     
     }
-  } catch (error) {
-    alert("user not exist register first");
-     location = "./signup.html"
-  }
+  });
 
+  if(flag===true){
+   if(email_signin.value==="riteshsalve07@gmail.com" && password_signin.value==="9977"){
+    alert("Welcome Boss")
+    location.href="./admin.html"
+   }else{
+    alert("Sign In Succussful")
+    location.href="./index.html"
+   }
+    
+  }
+  else if(count==1){
+    alert("Wrong Password")
+  }else{
+    alert("User does not exist, You need to sign-up First")
+  }
+  
 }
 
-
-function indexrun() {
-  location = "./index.html"
+function indexrun(){
+  location="./index.html"
 }

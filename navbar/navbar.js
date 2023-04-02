@@ -1,5 +1,3 @@
-let userName=JSON.parse(localStorage.getItem("user-display-name"))||`My Account`
-
 let navbar = function () {
     return `
         <!-- <div id="fixed"> -->
@@ -16,7 +14,7 @@ let navbar = function () {
             <a id="left" href=""><i class="fa-solid fa-wand-magic-sparkles"></i> Belk Rewards+</a>
             <a href=""><i class="fa-regular fa-ticket"></i>Coupons</a>
             
-                <a id="right" href="signin.html"><i class="fa-solid fa-user"></i>${userName}</a>
+                <a id="right" href="signin.html"><i class="fa-solid fa-user"></i>My Account</a>
             
             <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i> <span id="item-count">0</span>Bag</a>
         </div>
@@ -796,7 +794,39 @@ let navbar = function () {
             </div>
 
         </div>
-    
+        <div id="navbar1">
+      <div id="top">
+        <div> 
+            <a href="#"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbNkaulZabnRGKS99kAuJz6BMD0ogRnxVU95XuWTJBU09wunJE" alt=""></a> 
+        <a href="#"><img src="./logo.png" alt=""></a>
+      </div>
+     
+      <div id="div1"> <a href="#"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbNkaulZabnRGKS99kAuJz6BMD0ogRnxVU95XuWTJBU09wunJE" alt=""></a>
+        <a href="#"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbNkaulZabnRGKS99kAuJz6BMD0ogRnxVU95XuWTJBU09wunJE" alt=""></a>
+        <a href="#"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbNkaulZabnRGKS99kAuJz6BMD0ogRnxVU95XuWTJBU09wunJE" alt=""></a>
+        <a href="#"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRbNkaulZabnRGKS99kAuJz6BMD0ogRnxVU95XuWTJBU09wunJE" alt=""></a></div>
+     
+      </div>
+      <div id="search1"> 
+        <div>  <input type="text" placeholder="Search">  
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsHnzY6Fa-nCoziSbNTM2beTR1jHFQh2L08A&usqp=CAU" alt=""> </div>
+    </div>
+      <div id="scroll">
+      <div><p>Gifts</p></div> 
+      <div><p>Men</p></div> 
+      <div><p>Women</p></div>
+       <div><p>Kids</p></div>
+        <div><p>Shoes</p></div>
+         <div><p>Handbags</p></div>
+          <div><p>Jewelry</p></div>
+            <div><p>Beauty</p></div> 
+            <div><p>Home</p></div>
+             <div><p>Bed & Bath</p></div>
+      <div><p>Conn's x belt</p></div> 
+      <div><p>Brands</p></div> 
+      <div><p>Clearance</p></div>
+       </div>
+    </div>
  `
 }
 export {
