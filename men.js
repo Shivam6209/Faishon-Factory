@@ -201,4 +201,3 @@ function getAsButton(text, dataId) {
 function indexrun() {
   location = "./index.html"
 }
-
