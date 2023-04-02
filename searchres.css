@@ -333,9 +333,11 @@ body {
 }
 
 #totalfilter {
-    margin-top: 170px;
+    margin-top:220px;
     display: flex;
-    margin-left: 306px;
+    width:762px;
+
+    margin-left: 250px;
     justify-content: space-between;
     margin-right: 58px;
 }

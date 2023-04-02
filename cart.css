@@ -1,6 +1,8 @@
 .main{
     width: 98%;
     display: flex;
+    margin: auto;
+    margin-top: 190px;
 }
 .main_first{
     width: 90%;
