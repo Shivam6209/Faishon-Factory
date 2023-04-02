@@ -76,3 +76,9 @@ body{
     font-style: italic;
     border-bottom: 1.5px solid black;
 }
+
+@media screen and (max-width:650px){
+    #head{
+        margin-top: 200px;
+    }
+}

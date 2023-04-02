@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 #page-desc {
-    margin-top: 190px;
+    margin-top: 200px;
     margin-left: 50px;
 }
 
@@ -315,4 +315,11 @@ body {
 }
 .card:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width:650px){
+    #page-desc {
+        margin-top: 230px;
+        margin-left: 50px;
+    }
 }

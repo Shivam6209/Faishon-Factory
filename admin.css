@@ -133,8 +133,11 @@
             }
           }
           
-          @media screen and (max-width: 480px) {
+          @media screen and (max-width: 650px) {
             #product {
               width: 100%;
             }
+           #addparent{
+            margin-top:17%;
+           }
           }
