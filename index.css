@@ -288,13 +288,9 @@ margin-bottom: 20px;
   }
 
 
+/* /////////////////////////////////////////// */
 
 
-
-
-
-
-  
  /* Medium  screen media Query */
  @media screen and (min-width:650px) and (max-width:930px) {
   #img2{
@@ -511,6 +507,10 @@ grid-template-columns: repeat(2,1fr);
 
 
 /*--------------------- Mobile screen media query ----------------------------------*/
+#navbar1{
+  display: none;
+}
+
 @media screen and (max-width:650px) {
    #navbar{
     display: none;
@@ -838,84 +838,6 @@ grid-template-columns: repeat(2,1fr);
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
