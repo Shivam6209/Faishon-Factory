@@ -17,29 +17,39 @@
     <!-- Navbar end -->
         <div id="addParent">
           <div id="product" >
-            <input type="text" id="image" placeholder="enter image url">
+            <input  type="text" id="image" placeholder="enter image url">
             <input type="text" id="brand" placeholder="enter product Brand">
             <input type="text" id="title" placeholder="enter Title">
             <input type="text" id="price" placeholder="enter price ">
+            <select id="Category">
+              <option value="/addmen">Men</option>
+              <option value="/addwomen">Women</option>
+              <option value="/addkid">Kids</option>
+            </select>
           </div>
           <button id="addProducts">Add Product</button>
         </div>
-       <div id="data">
-        <table>
-            <tr>
-            <thead>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Title</th>
-                <th>Remove</th>
-              </thead >
-            </tr>
-            <tbody>
-                <!-- append the data here -->
-            </tbody>
-        </table>
-    </div>
+        <div id="data">
+          <table id="table">
+              <thead>
+                  <tr>
+                      <th id="iamge">Image</th>
+                      <th>Brand</th>
+                      <th>Price</th>
+                      <th>Title</th>
+                      <th id="Delete">Delete</th>
+                      
+                  </tr>  
+              </thead>
+              <tbody id="tbody">
+                  <!-- //// Data will render here ////-->
+              </tbody>
+              
+          </table>
+          
+        </div> 
+        
+      
        <!-- Footer -->
   <footer id="footer"></footer>
   <!-- footerEnd -->
