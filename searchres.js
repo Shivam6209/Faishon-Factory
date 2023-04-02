@@ -43,8 +43,9 @@ function createDivAndAppend(id, image, title, price, desc) {
   card.classList.add("card");
   card.setAttribute("data-id", id);
 ////// product view page//////
-
+let productId=JSON.parse(localStorage.getItem("product-id-view"))
 card.addEventListener("click",()=>{
+  localStorage.setItem("product-id-view",JSON.stringify(id))
   location="productViewPage.html"
 })
 ////// product view page//////
