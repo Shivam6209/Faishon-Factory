@@ -1,6 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/* cart page starttttttttttttttttttttttttttt */
 .main{
     width: 98%;
     display: flex;
+    margin-top: 50px;
 }
 .main_first{
     width: 90%;
@@ -53,18 +60,22 @@
 
 
 /* cart product */
+
 .cart_pro1{
     display: flex;
-    width: 85%;
+    width: 90%;
     /* margin-top: 50px;
     margin-left: 30px; */
     margin: auto;
     /* margin-left: 0; */
     border: 2px solid red;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
 .cart_img>img{
     height: 200px;
+    margin-left: 30px;
 }
 /* .cart_desc>h4{
     padding: 10px;
@@ -72,16 +83,40 @@
 .cart_desc{
     padding: 10px;
     margin: auto;
-    margin-left: 10px;
+    margin-left: 40px;
+}
+.qty{
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin: 50px 0 0 0;
+    margin-bottom:0px;
+    margin-left: 20px; */
+    margin: 50px 30px 50px 150px
+}
+.edit_pt{
+    /* margin: 100px 100px ; */
+    margin: 100px 40px 100px 0;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    align-items: center;
+}
+.edit_pt>a{
+    margin-left: 10px ;
+    margin-right: 10px;
 }
 
 /* coupons */
 .belk_rewards{
-    width: 85%;
+    width: 90%;
     /* margin: auto; */
-    margin-left: 60px;
+    margin-left: 47px;
     margin-bottom: 50px;
-    /* border: 2px solid red; */
+    margin-top: 30px;
+    
+    border: 2px solid red;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -101,6 +136,47 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
+.order{
+    padding: 20px;
+    /* height: 300px; */
+}
+.order>h5{
+    margin: 20px 0 20px 0;
+}
+.order>p{
+    margin: 10px 0 20px 0;
+}
+.order>h3{
+    /* margin: 5px; */
+    margin-right: 5px;
+    border: 2px solid red;
+}
+.order_total{
+    margin-left: 0;
+    border: 2px solid red;
+    margin-right: 0;
+    font-weight: 400;
+}
+.subtotal{
+    margin-left: 150px;
+     font-weight: 900;
+
+}
+.shipping{
+    margin-left: 50px; font-weight: 400;
+}
+.order_total{
+    margin-left: 130px; 
+    font-weight: 400;
+}
+
+.order_summ>hr{
+    height: 5px;
+     background-color: aqua;
+}
+.order_summ>p{
+    margin: 10px 0 25px 0
+}
 .order_summ>button{
     /* padding: 10px 150px 10px 50px; */
     padding: 15px 100px;
