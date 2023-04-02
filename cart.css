@@ -7,7 +7,7 @@
 .main{
     width: 98%;
     display: flex;
-    margin-top: 50px;
+    margin-top: 180px;
 }
 .main_first{
     width: 90%;
@@ -64,11 +64,8 @@
 .cart_pro1{
     display: flex;
     width: 90%;
-    /* margin-top: 50px;
-    margin-left: 30px; */
     margin: auto;
-    /* margin-left: 0; */
-    border: 2px solid red;
+    
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
@@ -86,7 +83,7 @@
     margin-left: 40px;
 }
 .qty{
-    border: 2px solid red;
+    
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -100,7 +97,7 @@
     margin: 100px 40px 100px 0;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    
     align-items: center;
 }
 .edit_pt>a{
@@ -115,8 +112,7 @@
     margin-left: 47px;
     margin-bottom: 50px;
     margin-top: 30px;
-    
-    border: 2px solid red;
+   
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -130,7 +126,7 @@
 
 /* order summary */
 .main_sec{
-    margin-top: 50px;
+    margin-top: 100px;
     width: 30%;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -149,23 +145,22 @@
 .order>h3{
     /* margin: 5px; */
     margin-right: 5px;
-    border: 2px solid red;
+    
 }
-.order_total{
+#order_total{
     margin-left: 0;
-    border: 2px solid red;
     margin-right: 0;
     font-weight: 400;
 }
-.subtotal{
-    margin-left: 150px;
+#subtotal{
+    margin-left: 100px;
      font-weight: 900;
 
 }
-.shipping{
+#shipping{
     margin-left: 50px; font-weight: 400;
 }
-.order_total{
+#order_total{
     margin-left: 130px; 
     font-weight: 400;
 }
