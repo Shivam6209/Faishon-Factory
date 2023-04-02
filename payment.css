@@ -1,6 +1,11 @@
-
+*{
+  
+    width: auto;
+    
+}
 .logo{
     margin-left: 60px;
+    overflow-x: hidden;
 }
 header{
 
@@ -11,6 +16,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
+    background-image: url(https://www.dynodesoft.com/assets/img/Ecommerce-gif-1.gif);
+
+    
 }
 
 .container{

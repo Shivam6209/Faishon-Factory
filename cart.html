@@ -1,47 +1,830 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="cart.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.ico">
-    <script src="https://kit.fontawesome.com/a92e0368d9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="navbar.css">
+    <script src="cart.js"></script>
 </head>
 <body onload="show()">
-
-    <!-- Navbar -->
+      <!-- Navbar -->
     <div id="navbar"></div>
     <!-- Navbar end -->
 
-    <div class="main">
-        <div class="main_first">
-           <div class="rt_mybag">
-            <h3>My Bag</h3>
-            <div class="rt_bag_cont1">
-                <img src="https://belk.scene7.com/is/image/Belk/BelkRewardsPlus_Insider?qlt=90&wid=66" alt="">
-                <div class="rt_bag_cont2"> 
-                <h2>Save an extra $16.25</h2>
-                <p>on this order when you open a Belk Rewards+credit   <a href="/belk-credit-card-rewards-benefits.html?sitecode=BEACSL1DB">Learn More. </a></p>
-    <div class="main">
-        <div class="main_first">
-            <div class="rt_mybag">
-                <h3>My Bag</h3>
-                <div class="rt_bag_cont1">
-                    <img src="https://belk.scene7.com/is/image/Belk/BelkRewardsPlus_Insider?qlt=90&wid=66" alt="">
-                    <div class="rt_bag_cont2">
-                        <h2>Save an extra $16.25</h2>
-                        <p>on this order when you open a Belk Rewards+credit <a
-                                href="/belk-credit-card-rewards-benefits.html?sitecode=BEACSL1DB">Learn More. </a></p>
-
-                    </div>
-
-                    <button>Apply Now</button>
-
-                </div>
+     <!-- <div id="fixed"> -->
+        <div id="navbar-top">
+            <div id="top-line"></div>
+            <a id="top-text1" href="#">FREE Shipping <span id="inn"> @59</span></a>
+            <a id="top-text2" href="#">Enable Accessibility</a>
+        </div>
+       
+        <div id="navbar-middle">
+            <a id = "logo" href = "index.html"><img src="./images/final.png" alt=""></a>
+            <input id="search" type="text" placeholder="What can we help you find?">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <a id="left" href=""><i class="fa-solid fa-wand-magic-sparkles"></i> Belk Rewards+</a>
+            <a href=""><i class="fa-regular fa-ticket"></i>Coupons</a>
+            
+                <a id="right" href="signin.html"><i class="fa-solid fa-user"></i>My Account</a>
+            
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i> <span id="item-count">0</span>Bag</a>
+        </div>
+        <!-- </div> -->
+        <div id="navbar-bottom">
+            <div id="nav2">
+                <ul>
+                    <li><a id="all-submenu" href="#">Gifts</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="women.html">Women</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Women</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Women Clothing</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Plus Size Clothing</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Women's Top</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Junior Clothing</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Pettle Clothings</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="./men.html">Men</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Men</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Mens Clothing</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Shoes</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Men's Accesories</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Big and Tall Clothing</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Young Man Clothings</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Kids</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Shoes</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Handbags</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Jwelary</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Beauty</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Home</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Bed & Bath</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Conn's x Belk</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Brands</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a id="all-submenu" href="#">Clearance</a>
+                        <div class="submenu-1">
+                            <ul style="background-color: rgb(238, 236, 236); margin-left: 20px;">
+                                <li><a style="font-size: 18px;  color: black; " href="">Gifts</a> </li>
+                                <li><a href="">Beauty Gifts</a> </li>
+                                <li><a href="">Causy Shop</a> </li>
+                                <li><a href="">Designer Handbags</a> </li>
+                                <li><a href="">Eco Friendly</a> </li>
+                                <li><a href="">Fine Jwellery</a> </li>
+                                <li><a href="">For the Trend Setter</a> </li>
+                                <li><a href="">Gifts Card</a> </li>
+                                <li><a href="">Gifts with a Purpose</a> </li>
+                                <li><a href="">Intimates</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">All Gifts</a></li>
+                                <li><a href="#">Gifts for Her</a></li>
+                                <li><a href="#">Gifts for Him</a></li>
+                                <li><a href="#">Gifts for Kids</a></li>
+                                <li><a href="#">Gifts for Pets</a></li>
+                                <li><a href="#">Gifts for the Home</a></li>
+                                <li><a href="#">Gifts Cards</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Just for Kids</a></li>
+                                <li><a href="#">Active Gear</a></li>
+                                <li><a href="#">Kids fan Gear</a></li>
+                                <li><a href="#">Toys & Games</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by price</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Favourite Brands</a></li>
+                                <li><a href="#">Brahmin</a></li>
+                                <li><a href="#">Estee Lauder</a></li>
+                                <li><a href="#">Free Peoples</a></li>
+                                <li><a href="#">Michal Chorls</a></li>
+                                <li><a href="#">Ralph Lauren</a></li>
+                                <li><a href="#">Shop All..</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-size: 18px;  color: black; " href="#">Gifts by Recepient</a></li>
+                                <li><a href="#">Under $10</a></li>
+                                <li><a href="#">Under $25</a></li>
+                                <li><a href="#">Under $50</a></li>
+                                <li><a href="#">Under $100</a></li>
+                                <li><a href="#">Over $100</a></li>
+                                <li><a href="#">Gifts Card</a></li>
+                                <li><a href="#">Shop All...</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a id="Store" href=""><i class="fa-solid fa-shop"></i>Find A Store</a>
             </div>
+
+        </div>
+
+<div class="main">
+<div class="main_first">
+   <div class="rt_mybag">
+    <h3>My Bag</h3>
+    <div class="rt_bag_cont1">
+        <img src="https://belk.scene7.com/is/image/Belk/BelkRewardsPlus_Insider?qlt=90&wid=66" alt="">
+        <div class="rt_bag_cont2"> 
+        <h2>Save an extra $16.25</h2>
+        <p>on this order when you open a Belk Rewards+credit   <a href="/belk-credit-card-rewards-benefits.html?sitecode=BEACSL1DB">Learn More. </a></p>
+
+        </div>
+        
+        <button>Apply Now</button>
+
+    </div>
+   </div>
 
    <!-- cart_product -->
    <div class="cart_product">
@@ -57,8 +840,9 @@
         <p>Edit</p>
      </div>
      <div class="qty">
-        <select name="" id="qty_option">
-            <h5>Qty:</h5>
+        <h5>Qty:</h5>
+        <select style="height:30px" name="" id="qty_option">
+           
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -70,50 +854,41 @@
             <option value="9">9</option>
             <option value="10">10</option>
         </select>
+    </div>
         <div class="edit_pt">
              <a href="">Remove</a>
              <a href="">Edit</a>
         </div>
-     </div>
+     
     </div>
    </div>
 
 
-            <!-- coupon -->
-            <div class="belk_rewards">
-                <h4>Coupons & Belk Bucks</h4>
-                <hr>
+   <!-- coupon -->
+   <div class="belk_rewards">
+     <h4>Coupons & Belk Bucks</h4>
+     <hr>
 
-                <input type="tel" name="" id="" placeholder="Enter your code here"><button>Add</button>
-                <p>Exclusions may apply. Want more savings? Visit our coupons page. <br>
-                    If you have Belk Reward Dollars, you can add them in checkout</p>
-            </div>
-            <!-- coupon end -->
-        </div>
-        <!-- main_first end -->
+     <input type="tel" name="" id="" placeholder="Enter your code here"><button>Add</button>
+     <p>Exclusions may apply. Want more savings? Visit our coupons page. <br>
+        If you have Belk Reward Dollars, you can add them in checkout</p>
+   </div>
+   <!-- coupon end -->
+</div>
+<!-- main_first end -->
 
-        <div class="main_sec">
-            <div style="padding: 5px; " class="order">
-                <h5>Order Summary</h5>
-                <hr>
-                <p>Subtotal <span style="margin-left: 200px; font-weight: 900;" class="subtotal">h</span></p>
-                <p>Shipping Charges <span style="margin-left: 50px; font-weight: 400;" class="shipping">FREE</span></p>
-                <hr>
-                <h3>Estimated Total <span style="margin-left: 130px; font-weight: 400;" class="order_total">t</span>
-                </h3>
-            </div>
-
-            <div class="order_summ">
-                <hr style="height: 5px; background-color: aqua;">
-                <p>Congrats! You've earned FREE Shipping</p>
-                <button>Secure Buy Now</button>
-            </div>
-        </div>
+<div  class="main_sec">
+    <div style="padding: 5px; " class="order">
+      <h5>Order Summary</h5>
+      <hr>
+      <p>Subtotal     <span  class="subtotal">h</span></p>  
+      <p>Shipping Charges  <span  class="shipping">FREE</span></p>  
+      <hr>
+      <h3>Total  <span  class="order_total" >t</span></h3>  
     </div>
-    <h2 style="width: 95%; margin: auto;">Customers Also Bought </h2>
-    <hr style="height: 1px; width: 95%;" class="">
+
     <div class="order_summ">
-        <hr style="height: 5px; background-color: aqua;">
+        <hr>
         <p>Congrats! You've earned FREE Shipping</p>
         <button>Secure Buy Now</button>
     </div>
@@ -124,84 +899,7 @@
 <h2 style="width: 95%; margin: auto;">Customers Also Bought </h2>
 <hr style="height: 1px; width: 95%;" class="">
 
-    <div style="display: flex;" class="product">
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-        <div style=" width: 22%; margin: 0 10px 0 10px;" class="p1">
-            <img style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;"
-                src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$"
-                alt="">
-            <p>Saddlebred@ Men's Big & Tall Easy Care Short Sleeve Woven Plaid Shirt</p>
-            <p>$49.50</p>
-            <P style="font-weight: 300; color: red;">$24.50 <span style="font-weight: 900; color: black;">after
-                    coupon</span></P>
-        </div>
-
-
-
-    </div>
-<div style="display: flex;" class="parent" >
+<div style="display: flex; margin-bottom: 50px;" class="parent" >
     <div class="leftArrow" onclick="moveLeft()">
         <button>&lt;</button>
     </div>
@@ -209,79 +907,79 @@
         <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>Saddlebred@ Men's Big & Tall Easy Care Short </p>
         <p>$49.50</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c2">
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203824_RBKTL11130BGTL_A_201&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>ZELOS Zelos Men's Big & Tall Air Rush Pants</p>
         <p>$11.85</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c3" >
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203305_CH327SSBK_A_010_T10L00&layer=comp&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>Chaps Men's Big & Tall Everyday Polo</p>
         <p>$19.80</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c4">
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203795_35424SP0000101_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>PGA TOUR Men's & Tall Jacquard Print short</p>
         <p>$12.00</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c5">
         <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>IZOD Men's Big & Tall Advantage Fleece </p>
         <p>$27.20</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c6">
         <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203795_35424SP0000101_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>Chap's Men's Big 5 FLEX Pocket Stretch Twill Pants</p>
         <p>$24.00</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c7" >
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203793_35424SP0000222_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>Long Sleeve Fishing Shirt</p>
         <p>$32.50</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div  class="child" id="c8" >
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203867_CM42LW289T_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>Sold Fishing Sleeve Shirt</p>
         <p>$21.80</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c6">
         <img src="" alt="">
         <p>Chap's Men's Big 5 FLEX Pocket Stretch Twill Pants</p>
         <p>$24.00</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c2">
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203824_RBKTL11130BGTL_A_201&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>ZELOS Zelos Men's Big & Tall Air Rush Pants</p>
         <p>$11.85</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c3" >
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203305_CH327SSBK_A_010_T10L00&layer=comp&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>Chaps Men's Big & Tall Everyday Polo</p>
         <p>$19.80</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c4">
         <img  src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203795_35424SP0000101_A_413&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>PGA TOUR Men's & Tall Jacquard Print short</p>
         <p>$12.00</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
     <div class="child" id="c5">
         <img src="https://belk.scene7.com/is/image/Belk?layer=0&src=3203796_35424SP0000500_A_100&$DWP_PRODUCT_REC_DESKTOP$" alt="">
         <p>IZOD Men's Big & Tall Advantage Fleece Sweatshirt</p>
         <p>$27.20</p>
-        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 900; color: black;">after coupon</span></P> 
+        <P style="font-weight: 300; color: red;">$24.50  <span style="font-weight: 600; color: black;">after coupon</span></P> 
     </div>
 
     <!-- <a class="prev" onclick="moveLeft()">❮</a>
@@ -290,14 +988,12 @@
     <div class="leftArrow" onclick="moveRight()">
         <button>&gt;</button>
     </div>
-     
+    
 </div>
-
-    <!-- Footer -->
-  <footer id="footer"></footer>
-    <!-- footerEnd -->
+ <!-- Footer -->
+ <footer id="footer"></footer>
+ <!-- footerEnd -->
 
 </body>
-
 </html>
 <script src="/navbarAndFooter/navbarAndFooter.js" type="module"></script>
