@@ -37,6 +37,8 @@ function setCardIdtoLsforCart(data){
       alert("product added to cart")
   })
 }
+
+////new changes added write this line for udate////
 function appendtodom(data) {
 
   let wrapper = document.getElementById("card-wrapper");
