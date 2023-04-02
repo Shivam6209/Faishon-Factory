@@ -30,10 +30,11 @@ function changeImg(data) {
 //// set card id to LS which added to cart///
 
 function setCardIdtoLsforCart(data){
-  let cartProductId=JSON.parse(localStorage.getItem("cart-product-id"));
+  let cartProductId=JSON.parse(localStorage.getItem("cart-product-id"))||[];
   let addTocart=document.getElementById("btn");
   addTocart.addEventListener("click",()=>{
-      localStorage.setItem("cart-product-id",JSON.stringify(data._id));
+      cartProductId.push(data)
+      localStorage.setItem("cart-product-id",JSON.stringify(cartProductId));
       alert("product added to cart")
   })
 }
