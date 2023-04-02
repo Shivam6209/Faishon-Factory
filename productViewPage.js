@@ -1,22 +1,47 @@
+let productId = JSON.parse(localStorage.getItem("product-id-view"))
 
-
-fetchAndRenderProduct("6427b25bb637841686360cec")
-async function fetchAndRenderProduct(id){
+fetchAndRenderProduct(productId)
+async function fetchAndRenderProduct(id) {
   try {
-    let res=await fetch(`https://lime-colorful-ladybug.cyclic.app/kidid/${id}`);
-    let data=await res.json();
+    let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/kidid/${id}`);
+    let data = await res.json();
     console.log(data)
     appendtodom(data)
+    changeImg(data)
+    setCardIdtoLsforCart(data)
   } catch (error) {
-    
+
   }
 }
+// change img function//////////
+function changeImg(data) {
+  let imageChange = document.getElementById("main-img");
+  imageChange.addEventListener("mouseover", () => {
+    if (data.img[1] != "") {
+      imageChange.src = data.img[1]
+    }
+  })
+  imageChange.addEventListener("mouseleave", () => {
+    imageChange.src = data.img[0]
+  })
+}
+// change img function//////////
 
+//// set card id to LS which added to cart///
 
-function appendtodom(data){
-    let wrapper=document.getElementById("card-wrapper");
-   let cardWrap=
-   `
+function setCardIdtoLsforCart(data){
+  let cartProductId=JSON.parse(localStorage.getItem("cart-product-id"));
+  let addTocart=document.getElementById("btn");
+  addTocart.addEventListener("click",()=>{
+      localStorage.setItem("cart-product-id",JSON.stringify(data._id));
+      alert("product added to cart")
+  })
+}
+function appendtodom(data) {
+
+  let wrapper = document.getElementById("card-wrapper");
+  let cardWrap =
+    `
    <div class="card">
    <!-- card left -->
    <div class="product-imgs">
@@ -28,12 +53,12 @@ function appendtodom(data){
      <div class="img-select">
        <div class="img-item">
          <a href="#" data-id="1">
-           <img id="first-show-img" src="${data.img[1]}" alt="image">
+
          </a>
        </div>
        <div class="img-item">
          <a href="#" data-id="2">
-           <img id="second-show-img" src="${data.img[0]}" alt="image">
+          
          </a>
        </div>
      </div>
@@ -80,11 +105,9 @@ function appendtodom(data){
  </div>
 
    `
-//    let addTocart=document.getElementById("btn");
-// addTocart.addEventListener("click",()=>{
-//     console.log("clicked")
-// })
-   wrapper.innerHTML=cardWrap;
+
+  
+  wrapper.innerHTML = cardWrap;
+
 
 }
-
