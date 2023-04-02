@@ -84,11 +84,11 @@ ecommerce.forEach((el)=>{
        </div>
     
    </div>`
-   
+ 
 })
  main.innerHTML=x;
 
- let edit=document.getElementById("edit")
+ //let edit=document.getElementById("edit")
   let price=document.getElementById("price")
   let sub_total=document.getElementById("subtotal")
   
@@ -114,16 +114,19 @@ ecommerce.forEach((el)=>{
   })
 
   // end of  price add in total and subtal
+
   
 // edit section
-
+let edit=document.getElementById("edit") 
 edit.addEventListener("click",()=>{
-    
-    location.href="men.html" 
-  })
+ console.log("hii")
+ location.href="men.html"
+})
+
  }
 
 //  end of cartarr loop
+
 
 
  for(let i=0; i<ecommerce.length; i++){
@@ -132,6 +135,8 @@ edit.addEventListener("click",()=>{
         rem(ecommerce[i]._id)
     })
 }
+
+
 
 
 function rem(id){
@@ -158,6 +163,27 @@ nextpge.addEventListener("click",()=>{
      location.href="payment.html"
     
 })
+
+
+
+// trying edit section
+// function edit_sec(cate){
+//     // ecommerce=ecommerce.filter((el)=>{
+//     //     if(el==cate){
+//     //         location.href="men.html"
+//     //     }
+//     //     cartarr()
+//     // })
+//     location.href="men.html"
+    
+// }
+
+// for(let i=0; i<ecommerce.length; i++){
+//     let remove=document.getElementById(ecommerce[i].category)
+//     remove.addEventListener("click",()=>{
+//         edit_sec(ecommerce[i].category)
+//     })
+// }
 
 
 

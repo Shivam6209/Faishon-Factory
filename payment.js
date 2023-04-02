@@ -18,7 +18,9 @@ checkOut.addEventListener("click", (e) => {
   e.preventDefault()
   check = prompt(`Enter Otp.  ${otp}`)
   if(check==otp){
+    location.href="index.html"
     alert("Thankyou for shopping.")
+    
     genOtp()
   }else{
     alert("Otp incorrect")
