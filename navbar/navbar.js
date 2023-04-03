@@ -1,5 +1,5 @@
-let userName=JSON.parse(localStorage.getItem("user-display-name"))||`My Account`
-
+let userName=JSON.parse(localStorage.getItem("user-display-name"))?JSON.parse(localStorage.getItem("user-display-name")):`My Account`
+let totalCartCount=JSON.parse(localStorage.getItem("cart-product-id"))||[];
 let navbar = function () {
     return `
         <!-- <div id="fixed"> -->
@@ -18,7 +18,7 @@ let navbar = function () {
             
                 <a id="right" href="signin.html"><i class="fa-solid fa-user"></i>${userName}</a>
             
-            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i> <span id="item-count">0</span>Bag</a>
+            <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i> <span id="item-count">${totalCartCount.length}</span>Bag</a>
         </div>
         <!-- </div> -->
         <div id="navbar-bottom">
