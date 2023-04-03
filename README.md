@@ -61,11 +61,12 @@ We have payment page during the checkout.
 
 [*`Sign-up`*](/SignUp.html) 👨‍💼(Ritesh Salve) : A page where the customer can create a new account for fast, seamless product purchases.
 
-![signin](https://user-images.githubusercontent.com/121334201/229413124-c2f6f959-d214-402f-b9ec-df4149427335.png)
+![signup](https://user-images.githubusercontent.com/121334201/229415521-00925efc-38bc-4bc2-a66b-a83efcdee089.png)
 
 
 
-[*`Sign-In`*](SignIn.html) 👨‍💼(Aditya Choudhary) : A page where existing users can sign in so that their experience is uninterrupted.
+
+[*`Sign-In`*](SignIn.html) 👨‍💼(Ritesh Salve) : A page where existing users can sign in so that their experience is uninterrupted.
 ![signin](https://user-images.githubusercontent.com/121334201/229413140-87d3245e-1798-4d31-9c59-246ca14dc3d1.png)
 
 
