@@ -2,7 +2,7 @@
 
 # [Fashion Factory ](https://symphonious-torrone-c03bf0.netlify.app/)
 
-- Clone of [1-800 Flowers](https://www.belk.com/)
+- Clone of [1-800 clothes](https://www.belk.com/)
 
 ### Contribution
 
