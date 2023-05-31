@@ -8,7 +8,7 @@ section {
     display: flex;
     height: 100vh;
     width: 100%;
-    background: red;
+    background:transparent;
     align-items: center;
     justify-content: center;
 }
@@ -17,7 +17,7 @@ section .dots span {
     position: absolute;
     height: 10px;
     width: 10px;
-    background: #743030;
+    background: #ff0303;
     border-radius: 50%;
     transform: rotate(calc(var(--i) * (360deg / 15))) translateY(35px);
     animation: animate 1.5s linear infinite;

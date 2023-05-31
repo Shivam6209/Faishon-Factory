@@ -821,7 +821,7 @@ let navbar1= function (){
          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsHnzY6Fa-nCoziSbNTM2beTR1jHFQh2L08A&usqp=CAU" alt=""> </div>
     </div>
       <div id="scroll">
-      <div><p>Gifts</p></div> 
+      <div><a href="./men.html">Gifts</a></div> 
       <div><p>Men</p></div> 
       <div><p>Women</p></div>
        <div><p>Kids</p></div>

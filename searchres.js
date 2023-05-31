@@ -1,3 +1,7 @@
+
+import{loader} from './loader/loader.js'
+let waiting=false;
+
 function indexrun(){
     location="./index.html"
  }
@@ -8,16 +12,32 @@ function indexrun(){
 fetchAndRenderProductData(1,searchValue)
 async function fetchAndRenderProductData(num,value) {
   try {
+    waiting=true;
+    runLoader();
     let res = await fetch(`https://lime-colorful-ladybug.cyclic.app/getkids?page=${num}&title=${value}`)
     let data = await res.json();
-    console.log(data)
+    
+      waiting=false; 
+    
+    runLoader(data);
+    // console.log(data);
     let total = document.getElementById("total");
     total.innerText = data.length;
-    getCard(data)
+
   } catch (error) {
     console.log(error)
   }
 }
+function runLoader(data){
+  if (waiting==true) {
+    document.getElementById("product-container").innerHTML=loader();
+  } else {
+    getCard(data)
+    
+    console.log("Hellooooo") 
+  }
+}
+
 
 
 function getCard(data) {

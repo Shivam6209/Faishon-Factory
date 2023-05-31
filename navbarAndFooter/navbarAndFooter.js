@@ -1,7 +1,7 @@
 import { navbar,navbar1 } from "/navbar/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
 document.getElementById("navbar1").innerHTML = navbar1();
-console.log(navbar1())
+// console.log(navbar1())
 
 import {footer} from "/footer/footer.js";
 document.getElementById("footer").innerHTML = footer();

@@ -1,4 +1,6 @@
 // ++++++++++++navbar++++++++
+import{loader} from './loader/loader.js'
+let waiting=false;
 window.onscroll = function () {
    myFunction()
 };
@@ -35,6 +37,8 @@ async function signupUser() {
          password: password_signup.value
       }
       console.log(userObj)
+      waiting=true;
+      runLoader();
       let res = await fetch("https://lime-colorful-ladybug.cyclic.app/reg", {
          method: "POST",
          headers: {
@@ -42,19 +46,29 @@ async function signupUser() {
          },
          body: JSON.stringify(userObj)
       })
-
+     
       let data = await res.json();
-      if(data.error){
-        return alert("user already exist Please login")
-      }
-      console.log(data);
-
-      alert(`Welcome ${userObj.name}`);
-      location="./signin.html"
+      waiting=false; 
+      runLoader(data,userObj);
+     
    } catch (error) {
       alert("give write input")
    }
 
+}
+
+function runLoader(data,userObj){
+ if(waiting){
+   document.getElementById("head").innerHTML=loader();
+ }else{
+   if(data.error){
+      return alert("user already exist Please login")
+    }
+    console.log(data);
+
+    alert(`Welcome ${userObj.name}`);
+    location="./signin.html"
+ }
 }
 
 function indexrun() {

@@ -5,15 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SearchRes</title>
-        <link rel="stylesheet" href="./searchres.css"> 
+        <link rel="stylesheet" href="./searchres.css">
+        <link rel="stylesheet" href="./loader/loader.css"> 
         <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.ico">
         <script src="https://kit.fontawesome.com/a92e0368d9.js" crossorigin="anonymous"></script>
     </head>
-<body>
+<body id="body">
      <div id="navbar"></div>
      
      <div id="navbar1"></div>
-
+<div id="mainContainer">
      <div id="totalfilter">
         <p style=" font-size:18px; font-weight:400px;line-height:35px;">Men's Styles & Apparel (<span
                 id="total">0</span>)</p>
@@ -35,12 +36,12 @@
     <div id="pagination-wrapper">
         <!-- Append pagiantion button -->
     </div>
-
+</div>
     <!--footer-->
     <footer id="footer"></footer>
     <!--footer end-->
 
 </body>
-<script src="./searchres.js"></script>
+<script src="./searchres.js" type="module"></script>
 </html>
 <script src="/navbarAndFooter/navbarAndFooter.js" type="module"></script>
