@@ -1,27 +1,7 @@
-# silky-toothbrush-7443
-
-# [Fashion Factory ](https://symphonious-torrone-c03bf0.netlify.app/)
-
-- Clone of [1-800 clothes](https://www.belk.com/)
-
-### Contribution
-
-A team of four people created this project over the course of five days.
-#### Team Members
-
-1. [Ritesh Salve]() (fw25_276)
-2. [Shivam Kumar jha](https://github.com/Shivam6209) (fw25_308)
-3. [Ranvijay Tiwari](https://github.com/RanvijayTiwari) (fw23_0533)
-4. [Deepshree Singh](https://github.com/DeepshreeSingh) (	fw24_268 )
-
-
-### Netlify Link
-(https://symphonious-torrone-c03bf0.netlify.app/)
-
 ### Description
-The Belk is a E-commerce website of wearing and clothing delivery. It includes various categories and brands according to the needs of customers.
-Our website offers clothings arrangements, wearings and unique brand to celebrate fashion, everyday occasions, and seasonal holidays, and to deliver comfort during times of grief. Backed by a caring team obsessed with service,also provides customers thoughtful ways to express themselves and connect with the most important people in their lives.
-The project is built using `HTML, CSS, and JavaScript`, and is intended to be a `responsive` and visually appealing website.
+Fashion Factory is an E-commerce website. It includes various categories and brands according to the needs of customers.
+Our website offers clothing arrangements, wearings, and unique brands to celebrate fashion, everyday occasions, and seasonal holidays, and to deliver comfort during grief. Backed by a caring team obsessed with service, it also provides customers with thoughtful ways to express themselves and connect with the most important people in their lives.
+The project is built using `HTML, CSS, and JavaScript`, is intended to be a `responsive` and visually appealing website.
 
 ### JSON SERVER 
 https://lime-colorful-ladybug.cyclic.app
@@ -31,6 +11,9 @@ https://lime-colorful-ladybug.cyclic.app
 - HTML
 - CSS
 - JavaScript
+
+### Deployed Link
+(https://faishon-factory.vercel.app/)
 
 
 ### Usage
@@ -88,3 +71,13 @@ In admin page we have functionality like:-
 Each and every page of the website  is **`responsive`** in nature for 3 screens i.e. `Desktop/Laptop, Tablet, and Mobile`.
 
 This is the overall view of the website.
+
+### Contribution
+
+A team of four people created this project over the course of five days.
+#### Team Members
+
+1. [Ritesh Salve]() (fw25_276)
+2. [Shivam Kumar jha](https://github.com/Shivam6209) (fw25_308)
+3. [Ranvijay Tiwari](https://github.com/RanvijayTiwari) (fw23_0533)
+4. [Deepshree Singh](https://github.com/DeepshreeSingh) (	fw24_268 )
